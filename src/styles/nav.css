@@ -1,0 +1,11 @@
+.nav-link {
+color: white;
+text-decoration: none;
+transition: color 0.3s ease;
+color: #242424;
+text-decoration: none
+}
+
+.nav-link:hover {
+color: #eb1d0e;
+}
