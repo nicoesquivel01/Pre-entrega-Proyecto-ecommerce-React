@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 
-function Card({producto, funcionCarrito}) {
+function Card({producto}) {
 // const [cantidad, setCantidad] = useState(1);
 
     // function agregarAlCarrito() {

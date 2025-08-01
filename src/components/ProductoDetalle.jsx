@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/ProductoDetalle.css"
 import { dispararSweet } from "../assets/sweerAlert";
+import { CarritoContext } from "../context/carritoContext";
 
 
-function ProductoDetalle({funcionCarrito}) {
+function ProductoDetalle({}) {
+  const{agregarAlCarrito} = useContext(CarritoContext);
 
   
 
@@ -15,10 +17,10 @@ function ProductoDetalle({funcionCarrito}) {
   const [error, setError] = useState(null);
 
 
-        function agregarAlCarrito({}) {
+        function funcionCarrito({}) {
           if (cantidad < 1) return;
           dispararSweet("Producto agregado", "Su producto fue agregado exitosamente", "success" , "cerrar")
-         funcionCarrito({ ...producto, cantidad }); // Pasamos también la cantidad
+         agregarAlCarrito({ ...producto, cantidad }); // Pasamos también la cantidad
       }
 
   function sumarContador() {
@@ -72,7 +74,7 @@ function ProductoDetalle({funcionCarrito}) {
           <span>{cantidad}</span>
           <button onClick={sumarContador}>+</button>
         </div>
-        <button className="detalle-boton"onClick={agregarAlCarrito}>Agregar al carrito</button>
+        <button className="detalle-boton"onClick={funcionCarrito}>Agregar al carrito</button>
       </div>
     </div>
   );}

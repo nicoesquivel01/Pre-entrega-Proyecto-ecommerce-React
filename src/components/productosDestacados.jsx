@@ -16,6 +16,7 @@ function ProductosDestacados() {
 
 
 {useEffect(() => {
+    console.log("se ejecuta useEffect")
         fetch('https://681bcb236ae7c794cf6fd004.mockapi.io/productos')
             .then((respuesta) => respuesta.json())
             .then((datos) => {

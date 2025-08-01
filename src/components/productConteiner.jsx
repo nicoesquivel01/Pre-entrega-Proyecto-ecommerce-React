@@ -6,7 +6,7 @@ import CarritoCard from "./CarritoCard";
 
 
 
-function ProductosConteiner({functionCarrito}) { 
+function ProductosConteiner({fuctionCarrito}) { 
 
     const [productos, setProductos] = useState ([])
     // const [productosCarrito, setProductosCarrito] = useState([])
